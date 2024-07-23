@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="bonsai, ecommerce, plants">
+    <link rel="icon" href="https://pic.onlinewebfonts.com/svg/img_39832.png"> <!--This is for favicon-->
+    <title>Bonsai</title>
+
+    <link rel="stylesheet" href="main.css"> <!--Links to the css element-->
+
+    <style>
+        body
+        {
+            background-color: #ecdfc5;
+            width: 100%;
+            
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body style="margin: 0;">
+    <header>
+        <div class="container">
+            <a href="main.html" id="logo"><img src="logo.png" alt="Bonsai" width="50px"></a> <!--Put logo here-->
+            <!--Links to other pages-->
+            <ul >  
+                <li><a href="../Main/main.html" class="links home">Home</a></li>                <!--Home Page-->
+                
+                <li><a href="../Blog/blog.html" class="links">Blog</a></li>                <!--Blog Page-->
+                
+                <li><a href="../Store/bonsai.html" class="links">Products</a></li>            <!--Store Page-->
+                        
+                <li><a href="../Research/research.html" class="links">Research</a></li>        <!--Research Page-->
+                    
+                <li><a href="../About/about.html" class="links">About Us</a></li>           <!--About US Page-->
+
+                <li><a href="../Signup/signup.html" class="links">Sign Up</a></li>           <!--Sign up Page-->
+             </ul>   
+       </div>
+      </header>
+            
+            
+<div class="main">
+        <img src="bonsai1.jpg" alt="bonsai" id="bonsai_pic">
+
+        <script>
+            this.window.addEventListener('scroll', function() //this refers to the objects, window in this case
+            {
+                var scrollTop = window.pageYOffset;
+                //pageYOffset returns the num of pixels the document has been scrolled vertically
+                var image = document.getElementById('bonsai_pic');
+                //getElementById searches for an ID named 'bonsai_pic'
+                image.style.filter = 'blur(' + scrollTop / 150 + 'px)';
+                // .style.filter adds visual effects like blur into images
+                // Here, it takes blur(value) and in place of the value, we have kept a variable which changes value dynamically
+                console.log(image.style.filter);
+            });
+        </script>
+        <script src="main.js">
+            //this is for the external javascript file used to change bonsai text's opacity
+        </script> 
+        <h1 id="bonsai">bonsai</h1>
+</div>
+
+<div class="home_part" id="left">
+    <div class="content_part">
+        <h2>experience like never before.</h2>
+        
+    </div>
+
+    <div class="image_part">
+        <img src="home_bonsai.png" alt="">
+    </div>
+    
+    <div class="content_part" id="right">
+        <h1>A one stop shop for all things Bonsai.</h1>
+        <p>
+             <br><br>
+            Whether you're starting out or settling in, we provide the best (mini) trees for the best price.
+        </p>
+    </div>
+</div>
+
+<div class="in_between" id="connected">Staying Connected</div>
+
+<div class="blog_part">
+    <div class="image_part">
+        <img src="blog.png" alt="blog pic">
+        <h3>Get the latest updates on technology to stay tech savvy from our parent company</h3>
+    </div>
+
+    <div class="content_part">
+        <h1>Fall in love with our <a href="../Store/store.html"> articles! </a></h1>
+        <img src="hmm.jpg" alt="">
+       
+    </div>
+</div>
+
+<div class="in_between" id="catalogue">Catalogue</div>
+<div class="products_part">
+    <div class="content_part">
+        <h1>Your <i style="color:#ecdfc5">need</i>  is in your <i style="color:#ecdfc5">feed</i></h1>
+        <br>
+        <p>Products are refreshed and updated every week catered to your personal preference</p>
+    </div>
+
+    <div class="image_part">
+        <h2>Your weekly recommendation</h2>
+        <div class="pic_space">       <!--This is for spacing the two pictures-->
+                <img src="https://media.discordapp.net/attachments/1055026755418722380/1062005159753945248/14_0319_studio-028.png?width=551&height=551" alt="">
+                <img src="https://media.discordapp.net/attachments/1055026755418722380/1062005302498701393/14_0319_studio-594-2.png?width=551&height=551" alt="">
+        </div>
+
+        <div class="text_space"> <!--This is for writing names below the two pictures-->
+            <h3>Japanese Apricot</h3>
+            <h3>Vine Maple</h3>
+        </div>
+    </div>
+</div>
+
+<div class="satisfied_customers">
+    <div class="customer" id="Jeff">
+        <p>"Apricot has been my go to store for all my bonsai and gardening needs. The prompt delivery and a friendly support team puts the competiton to shame."<br><br> -Jeff, a proud customer since 1999</p>
+        <img src="https://calisphere.org/clip/500x500/7c3c38d25d47d0bc062183cbf929ac0d" alt=""> 
+    </div>
+    <hr>
+    <div class="customer" id="Shrek">
+        <img src="https://images.thestar.com/-UsUIfPP-DDGBBpXjO3twxkSEjs=/1200x1200/smart/filters:cb(1548689313694):format(webp)/https://www.thestar.com/content/dam/thestar/entertainment/television/analysis/2019/01/25/is-this-the-breakout-year-for-asian-men-in-leading-roles/simu_liu.jpg" alt="">
+        <p>"Having started a Bonsai garden recently was an overwhelming task for me. But with Apricot, I was able to get all the help I needed to start my journey. " <br><br>-Simu Liu</p>
+    </div>
+</div>
+
+<div class="research_part">
+    <div class="image_part">
+        <h2>Research</h2>
+        <!--Image background is set in css-->
+    </div>
+
+    <div class="content_part">
+        <p>At apricot, we believe in giving. The research section is dedicated for curious minds who want to make change to the world and make it a better place.</p>
+        <br><br>
+        <p>Check out the <a href="../Research/research.html">Research</a> page to learn more.</p>
+    </div>
+</div>
+
+    <script src="main.js"></script>
+    <div class="footer">
+        <footer>        
+            <div id="footer_map">
+                <p class="footer_text">📍 Location:</p>
+                <br>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.311686975661!2d85.32304771546583!3d27.707661232084128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1908434cb3c5%3A0x1fdf1a6d41d2512d!2sIslington%20College!5e0!3m2!1sen!2snp!4v1673160757230!5m2!1sen!2snp" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            
+            <div id="footer2">
+                <div id="contact">
+                    <p class="footer_text">📞 Contact:</p>
+                    <br>
+                    <p class="footer_text_info">+977-9812345678</p>
+                    <p class="footer_text_info">+977-9887654321</p>
+                    <p class="footer_text_info">+977-9811223344</p>
+                    <br><br>
+                    
+                    <p class="footer_text">📧 Email:</p>
+                    <br>
+                    <p class="footer_text_info">gardenoplenty@gmail.com</p>
+                    <p class="footer_text_info">bonsaitr33@gmail.com</p>
+                    <p class="footer_text_info">smoltrees@gmail.com</p>
+                </div>
+                
+                <div id="socials">
+                    
+                    <br>
+                    <img src="https://cdn.freebiesupply.com/images/large/2x/instagram-icon-white-on-black.png" alt="Instagram" height="50px"> 
+                    <img src="https://cdn.freebiesupply.com/logos/large/2x/pinterest-1-logo-black-and-white.png" alt="Pintrest" height="50px">
+                    <img src="https://cdn-icons-png.flaticon.com/512/20/20673.png" alt="Facebook" height="50px">
+                    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Github" height="50px">
+                </div>
+            </div>
+
+            <div id="footer3">
+                <p class="footer_text">🔗 Related Links:</p>
+                <br>
+                <ul>
+                    <li class="footer_text_info"><a href="https://www.youtube.com/watch?v=c1u8jEPG71U" target="_blank"> Working with us</a></li>
+                    <li class="footer_text_info"><a href="https://www.youtube.com/watch?v=LgnA2Rd_uiE" target="_blank">Privacy Policy</a></li>
+                    <li class="footer_text_info"><a href="https://www.youtube.com/watch?v=PLb720ZPcQI" target="_blank">Terms and conditions</a></li>
+                </ul>
+                <br>
+                <p class="footer_text">🖊️ Sign up to get the latest updates and news</p>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>

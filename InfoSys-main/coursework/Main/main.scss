@@ -1,0 +1,558 @@
+*                   /*The "*" selects all the elements aka universal selector or apply styles to all elements*/
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*tells the browser to account for any border and padding in the values you specify*/
+    /*For eg, if our content takes more space including the padding, the browser allows it*/
+    /*written a bit in detail in my MST wala notebook, ask me if you dont understand*/
+
+    
+}
+
+body
+{
+    background-color: #ecdfc5;
+    width: 100%;
+    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.container
+{
+    /*Absolute means its position value is fixed*/
+    /*Sticky means Relative(when normal) and Fixed (when scrolled) and the top,right,bottom, left values are active*/
+    /*The top and left 0 means it'll stay at the top left corner*/
+    /*The navigation bar will take 100% of the width of the browser*/
+    /*The values in padding shows top padding is 30px and left and right padding is 100px*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    height: 120px;
+    background-color: #647b5a;
+    z-index: 2;
+    
+    
+    /*Wraps texts acc to screen size*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+     /*justify content defines how the browser distributes space between and around content items*/
+     /*space-between ensures items will have space between them*/
+     align-items: center;
+    
+
+    #logo
+    {
+        color: #000000;
+        font-weight: 700; /*thiccness of characters*/
+        font-size: 2em;     /*1em = 2 inches or 16 pixels*/
+        /*em stands for emphemeral unit*/
+        /*em is favourable than px or cm because it is relative to parent's font size*/
+        text-transform: uppercase;  /*controls text case*/
+        text-decoration: none;
+    }    
+
+    ul
+    {
+        display: flex;
+        justify-content: center; /*Aligns the list items in the center of container*/
+        /*They were positioned on the top right before this*/
+        list-style: none;   /*Removes the bullet thingy from list*/
+
+        li
+        {
+            margin-left: 20px;
+            
+            .links
+            {
+                color: black;
+                
+                padding: 6px 15px;
+                
+                /*Removes the underling thingy from links*/
+                text-decoration: none;
+            }
+
+            a:hover, .home
+            {
+                background-color: #fff;
+                border-radius: 15px;
+            }
+
+            
+        }
+    }
+}
+
+
+
+#bonsai_pic
+    {
+      
+        display: block;   
+        top: 15%;
+        left: 40%;
+        position: fixed;
+        background-position: center;
+        z-index: 0;
+    }
+
+.main
+    {
+        min-height: 200vh;  /*vh means viewport height*/
+        /*height so that we can scroll down the screen*/
+        #bonsai
+        {
+            position: sticky;   /*makes sure that the text goes away after the div ends*/
+            font-family: Broadway;
+            color: #3a523f;
+            padding-left: 15px;
+            padding-bottom: 30px;
+            top: 40%;
+            
+            
+            filter: opacity(0%);
+            white-space: nowrap;    /*Defines how white-space is treated inside an elements*/
+            /*nowrap will not break the sentence (or wrap around) into another line
+            but rather continue the sentence as is*/
+
+            /* For better explaination about nowrap: 
+            https://www.w3schools.com/cssref/playdemo.php?filename=playcss_white-space&preval=nowrap */
+            font-size: 6em;
+        }
+    }
+
+
+.home_part
+{
+    min-height: 700px;
+    position: static;
+    display: flex;
+    z-index: 1;
+    background: #647b5a;
+
+    #left
+        {
+            background: #647b5a;
+        }
+
+        #right
+        {
+            background: #3a523f;
+            word-spacing: 1px;
+        }
+    .content_part
+    {  
+        
+        flex: 30%;
+        flex-wrap: wrap; 
+        
+        padding: 20px;
+
+        
+        h2
+        {
+            position: relative;
+            top: 20%;
+            color: #ecdfc5;
+            /*color: #4949b4;*/
+            font-size: 5em;
+            font-family: Broadway;
+        }
+
+        p
+        {
+            position: relative;
+            top: 20%;
+            /*color: #1c1787;*/
+            color: #dec29b;
+            font-size: 1.8em;
+            font-weight: 300;
+            font-family:'Segoe UI';
+        }
+
+        h1
+        {
+            position: relative;
+            top: 20%;
+            font-size: 2.5em;
+            font-weight: 400;
+            font-style: italic;
+
+            color: #dec29b;
+            /*color: #060344;*/
+
+        }
+   }
+
+   .image_part
+   {
+        flex: 70%;
+        img
+        {
+            overflow-x: visible;
+            height: 100%;
+            width: 100%;
+            margin-right: 0;
+        }
+   }
+}
+
+.in_between
+{
+    height: 150px;
+    font-size: 5em;
+    padding: 20px;
+    z-index: 1;
+    font-weight: 550;
+    font-family: Broadway;
+    // color: #022831;
+    color: #3a523f;
+    background-color: #ecdfc5;
+
+}
+#connected
+{
+    background: #000;
+    color: #dec29b;
+}
+
+.blog_part
+{
+    position: static;
+    height: 90vh;
+    z-index: 1;
+    display: flex;
+    
+    .image_part
+    {
+        background: #7b7bf0;
+        flex: 60%;
+        img
+        {
+            height: 75vh;
+            
+            width: 100%;
+        }
+
+        h3
+        {
+            padding: 20px;
+            color: #fff;
+            font-size: 2em;
+            font-family: 'Segoe UI';
+           
+        }
+
+    }
+
+    .content_part
+    {
+        flex: 40%;
+        background-color: #3A523F;
+
+        h1
+        {
+            padding: 20px;
+            font-size: 2.5em;
+            font-weight: 400;
+            color: #ecdfc5;
+            font-family: 'Segoe UI';
+            a
+            {
+                font-family: 'Segoe UI';
+                color: #ecdfc5;
+            }
+        }
+
+        img
+        {
+            width: 100%;
+            height: 70vh;
+        }
+    }
+}
+
+.products_part
+{
+    position: static;
+    height: 80vh;
+    z-index: 1;
+    display: flex;
+
+    .content_part
+    {
+        flex: 20%;
+        flex-wrap: wrap;
+        background: #3a523f;
+        padding: 30px;
+        h1
+        {
+            line-height: 70px;
+            font-size: 5em;
+            color: #fff;
+            
+        }
+
+        p
+        {
+            font-size: 1.5em;
+        }
+    }
+
+    .image_part
+    {
+        flex: 70%;
+        background: #0b0901;
+        width: 100%;
+
+
+        h2
+        {
+            color: #fff;
+            padding: 30px;
+            font-size: 3.5em;
+            
+            
+        }
+
+        .pic_space
+        {
+            
+            display: flex;
+            justify-content: center;
+
+            img
+            {
+                padding: 20px;
+                width: 50vh;
+
+            }
+        }
+
+        .text_space
+        {
+            display: flex;
+            justify-content: center;
+            
+            h3
+            {
+                font-size: 1.4em;
+                flex: 50%;
+                margin: 0 16%;
+                color: #fff;
+                flex: 50%;
+                display: flex;
+                justify-content: baseline;
+            }
+        }
+
+    }
+}
+
+.satisfied_customers
+{   
+    z-index: 1;
+    height: 70vh;
+    
+    .customer
+    {
+        
+        height: 35vh;
+        display: flex;
+        padding: 30px;
+        background-color: rgb(247, 242, 242);
+        p
+        {
+            flex: 90%;
+            font-size: 1.5em;
+            padding-left: 20px;
+        }
+        img
+        {
+            flex: 10%;
+            height: 200px;
+            
+            border-radius: 50%;
+        }
+        
+    }
+}
+
+.research_part
+{
+    height: 100vh;
+    position: relative;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+
+    div
+    {
+        position: relative;
+        flex: 50%;
+        background: #3A523F;
+    }
+
+    .image_part
+    {
+        background: url(https://i.pinimg.com/564x/c9/9e/95/c99e951f80fccdd0f644ec01af9a3f7e.jpg);      
+         /*placing the image directly here instead of using img tag because we're using the image as background cover and its easier this way*/
+        background-size: cover;                     
+     
+        /*This gives the hollowed out look when the text appears*/
+        h2
+        {
+            -webkit-text-stroke: 2px;
+            -webkit-text-stroke-color: #fff;
+            color: transparent;
+            left: 100%;
+        }
+    }
+
+    /*this is responsible for the sliding animation*/
+    h2
+    {
+        position: absolute;
+        white-space: nowrap;
+        font-size: 12em;
+        line-height: 25vh;
+        animation: animate 30s linear infinite;
+        color: #fff;
+
+    }
+
+    /*@keyframes rule specifies the animation code, animate in h2 in this case*/
+    @keyframes animate  
+    {
+        0%
+        {
+            transform: translateX(0);
+        }
+
+        100%
+        {
+            transform: translateX(-100%);
+        }
+    }
+
+    /*Learn more about @ here: https://stackoverflow.com/questions/3453257/what-is-the-purpose-of-the-symbol-in-css*/
+    /*About keyframes https://www.w3schools.com/cssref/css3_pr_animation-keyframes.php#:~:text=Definition%20and%20Usage,of%20CSS%20styles%20many%20times.*/
+
+    .content_part
+    {
+        font-size: 2.5em;
+        padding: 20px;
+
+        p,a
+        {
+            margin-top: 20%;
+            color: #fff;
+        }
+
+        a
+        {
+            text-decoration: none;
+            padding: 5px;
+            background-color: #000000;
+            border-radius: 10px;
+        }
+    }
+}
+
+.footer
+{
+    z-index: 2;     /*this overlaps over the image*/
+
+    footer
+    {
+        position: static;   /*this helps the footer to stay at the bottom*/
+        bottom: 0;      /*position relative to the bottom*/
+        background-color: #171717; 
+        width: 100%;
+        height: 300px;
+        display: flex;      /*defines the footer section as a box*/
+        padding: 5px;
+        
+        
+        
+        #footer_map
+        {
+            flex: 30%;
+            padding-left: 10px;
+            padding-top: 5px;
+
+            iframe          /*this is the embedded map on the footer*/
+            {
+                width: 400px;
+            }
+            
+        }
+
+        #footer2, #footer3
+        {
+            padding-left: 10px;
+            padding-top: 15px;
+            
+        }
+
+        #footer2
+        {
+            flex: 45%;      /*divides the footer box to 45% for the middle box*/
+            display: flex;  /*We make the footer2 div a box again so that we can divide two boxes,
+            contact and socials in an equally spaced manner*/
+            
+            #contact, #socials
+            {
+                flex: 50%;  /*equally divides footer2 into 2 halves*/
+            }
+
+            #socials
+            {
+                
+
+                img
+                {
+                    padding: 5px;
+                }
+            }
+        }
+
+        #footer3
+        {
+            flex: 25%;
+        }
+
+        .footer_text
+        {
+            color: #ecbe1a;
+            font-weight: 500;   /*boldness of text*/
+        }
+
+        .footer_text_info
+        {
+            color: #cecece;
+        }
+
+        ul
+        {
+            list-style: none;       /*removes the listing dot thingy*/
+            line-height: 30px;      /*vertical spacing between lines*/
+
+            a
+            {
+                text-decoration: none;  /*removes underlined thingy from link*/
+                color: #cecece;
+            }
+        }
+    } 
+}
+
+

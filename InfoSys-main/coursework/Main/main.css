@@ -1,0 +1,421 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*tells the browser to account for any border and padding in the values you specify*/
+  /*For eg, if our content takes more space including the padding, the browser allows it*/
+  /*written a bit in detail in my MST wala notebook, ask me if you dont understand*/
+}
+
+body {
+  background-color: #ecdfc5;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  /*Absolute means its position value is fixed*/
+  /*Sticky means Relative(when normal) and Fixed (when scrolled) and the top,right,bottom, left values are active*/
+  /*The top and left 0 means it'll stay at the top left corner*/
+  /*The navigation bar will take 100% of the width of the browser*/
+  /*The values in padding shows top padding is 30px and left and right padding is 100px*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  height: 120px;
+  background-color: #647b5a;
+  z-index: 2;
+  /*Wraps texts acc to screen size*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /*justify content defines how the browser distributes space between and around content items*/
+  /*space-between ensures items will have space between them*/
+  align-items: center;
+}
+.container #logo {
+  color: #000000;
+  font-weight: 700; /*thiccness of characters*/
+  font-size: 2em; /*1em = 2 inches or 16 pixels*/
+  /*em stands for emphemeral unit*/
+  /*em is favourable than px or cm because it is relative to parent's font size*/
+  text-transform: uppercase; /*controls text case*/
+  text-decoration: none;
+}
+.container ul {
+  display: flex;
+  justify-content: center; /*Aligns the list items in the center of container*/
+  /*They were positioned on the top right before this*/
+  list-style: none; /*Removes the bullet thingy from list*/
+}
+.container ul li {
+  margin-left: 20px;
+}
+.container ul li .links {
+  color: black;
+  padding: 6px 15px;
+  /*Removes the underling thingy from links*/
+  text-decoration: none;
+}
+.container ul li a:hover, .container ul li .home {
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+#bonsai_pic {
+  display: block;
+  top: 15%;
+  left: 40%;
+  position: fixed;
+  background-position: center;
+  z-index: 0;
+}
+
+.main {
+  min-height: 200vh; /*vh means viewport height*/
+  /*height so that we can scroll down the screen*/
+}
+.main #bonsai {
+  position: sticky; /*makes sure that the text goes away after the div ends*/
+  font-family: Broadway;
+  color: #3a523f;
+  padding-left: 15px;
+  padding-bottom: 30px;
+  top: 40%;
+  filter: opacity(0%);
+  white-space: nowrap; /*Defines how white-space is treated inside an elements*/
+  /*nowrap will not break the sentence (or wrap around) into another line
+  but rather continue the sentence as is*/
+  /* For better explaination about nowrap: 
+  https://www.w3schools.com/cssref/playdemo.php?filename=playcss_white-space&preval=nowrap */
+  font-size: 6em;
+}
+
+.home_part {
+  min-height: 700px;
+  position: static;
+  display: flex;
+  z-index: 1;
+  background: #647b5a;
+}
+.home_part #left {
+  background: #647b5a;
+}
+.home_part #right {
+  background: #3a523f;
+  word-spacing: 1px;
+}
+.home_part .content_part {
+  flex: 30%;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+.home_part .content_part h2 {
+  position: relative;
+  top: 20%;
+  color: #ecdfc5;
+  /*color: #4949b4;*/
+  font-size: 5em;
+  font-family: Broadway;
+}
+.home_part .content_part p {
+  position: relative;
+  top: 20%;
+  /*color: #1c1787;*/
+  color: #dec29b;
+  font-size: 1.8em;
+  font-weight: 300;
+  font-family: "Segoe UI";
+}
+.home_part .content_part h1 {
+  position: relative;
+  top: 20%;
+  font-size: 2.5em;
+  font-weight: 400;
+  font-style: italic;
+  color: #dec29b;
+  /*color: #060344;*/
+}
+.home_part .image_part {
+  flex: 70%;
+}
+.home_part .image_part img {
+  overflow-x: visible;
+  height: 100%;
+  width: 100%;
+  margin-right: 0;
+}
+
+.in_between {
+  height: 150px;
+  font-size: 5em;
+  padding: 20px;
+  z-index: 1;
+  font-weight: 550;
+  font-family: Broadway;
+  color: #3a523f;
+  background-color: #ecdfc5;
+}
+
+#connected {
+  background: #000;
+  color: #dec29b;
+}
+
+.blog_part {
+  position: static;
+  height: 90vh;
+  z-index: 1;
+  display: flex;
+}
+.blog_part .image_part {
+  background: #7b7bf0;
+  flex: 60%;
+}
+.blog_part .image_part img {
+  height: 75vh;
+  width: 100%;
+}
+.blog_part .image_part h3 {
+  padding: 20px;
+  color: #fff;
+  font-size: 2em;
+  font-family: "Segoe UI";
+}
+.blog_part .content_part {
+  flex: 40%;
+  background-color: #3A523F;
+}
+.blog_part .content_part h1 {
+  padding: 20px;
+  font-size: 2.5em;
+  font-weight: 400;
+  color: #ecdfc5;
+  font-family: "Segoe UI";
+}
+.blog_part .content_part h1 a {
+  font-family: "Segoe UI";
+  color: #ecdfc5;
+}
+.blog_part .content_part img {
+  width: 100%;
+  height: 70vh;
+}
+
+.products_part {
+  position: static;
+  height: 80vh;
+  z-index: 1;
+  display: flex;
+}
+.products_part .content_part {
+  flex: 20%;
+  flex-wrap: wrap;
+  background: #3a523f;
+  padding: 30px;
+}
+.products_part .content_part h1 {
+  line-height: 70px;
+  font-size: 5em;
+  color: #fff;
+}
+.products_part .content_part p {
+  font-size: 1.5em;
+}
+.products_part .image_part {
+  flex: 70%;
+  background: #0b0901;
+  width: 100%;
+}
+.products_part .image_part h2 {
+  color: #fff;
+  padding: 30px;
+  font-size: 3.5em;
+}
+.products_part .image_part .pic_space {
+  display: flex;
+  justify-content: center;
+}
+.products_part .image_part .pic_space img {
+  padding: 20px;
+  width: 50vh;
+}
+.products_part .image_part .text_space {
+  display: flex;
+  justify-content: center;
+}
+.products_part .image_part .text_space h3 {
+  font-size: 1.4em;
+  flex: 50%;
+  margin: 0 16%;
+  color: #fff;
+  flex: 50%;
+  display: flex;
+  justify-content: baseline;
+}
+
+.satisfied_customers {
+  z-index: 1;
+  height: 70vh;
+}
+.satisfied_customers .customer {
+  height: 35vh;
+  display: flex;
+  padding: 30px;
+  background-color: rgb(247, 242, 242);
+}
+.satisfied_customers .customer p {
+  flex: 90%;
+  font-size: 1.5em;
+  padding-left: 20px;
+}
+.satisfied_customers .customer img {
+  flex: 10%;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.research_part {
+  height: 100vh;
+  position: relative;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  /*this is responsible for the sliding animation*/
+  /*@keyframes rule specifies the animation code, animate in h2 in this case*/
+  /*Learn more about @ here: https://stackoverflow.com/questions/3453257/what-is-the-purpose-of-the-symbol-in-css*/
+  /*About keyframes https://www.w3schools.com/cssref/css3_pr_animation-keyframes.php#:~:text=Definition%20and%20Usage,of%20CSS%20styles%20many%20times.*/
+}
+.research_part div {
+  position: relative;
+  flex: 50%;
+  background: #3A523F;
+}
+.research_part .image_part {
+  background: url(https://i.pinimg.com/564x/c9/9e/95/c99e951f80fccdd0f644ec01af9a3f7e.jpg);
+  /*placing the image directly here instead of using img tag because we're using the image as background cover and its easier this way*/
+  background-size: cover;
+  /*This gives the hollowed out look when the text appears*/
+}
+.research_part .image_part h2 {
+  -webkit-text-stroke: 2px; /*specifies width of stroke for each character*/
+  -webkit-text-stroke-color: #fff;  /*specifies colour of strokes for each text character*/
+  
+  /*webkit ensures compatibility among browsers and provides animations*/
+  
+  color: transparent; /*this gives out that hollowed out look*/
+  left: 100%; /*sets initial position to 100% of the left side
+  which causes the RESEARCH text to begin from the other area of div*/
+}
+
+.research_part h2 {
+  position: absolute;
+  white-space: nowrap;  /*text won't be displayed in multiple lines if there is no space*/
+  font-size: 12em;
+  line-height: 25vh;
+  animation: animate 30s linear infinite;
+  /* animate is just the name for the animation we are about to do, like a variable
+    30s means the time span over which this occurs
+    linear specifies an animation with the same speed from start to end 
+    infinite means it'll repeat infinitely 
+
+    For more info, https://www.w3schools.com/css/css3_animations.asp
+  */
+  color: #fff;
+}
+
+
+/* When we specify CSS inside the @keyframes rule, the animation gratually changes from current 
+style to the new style
+
+for eg, from 0% to 100% in this case
+*/
+
+@keyframes animate {
+  /*initially, the X-axis value of the h2 tag is at 0, aka initial position*/
+  /* transform allows us to use methods in graphs we did in class 10, like enlargement, translate, etc*/
+
+  0% {
+    transform: translateX(0);
+  }
+
+  /*it slowly transforms to 100% in which case, it's position is changed to -100% of initial position*/
+  /*this gives the animation effect of RESEARCH*/
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.research_part .content_part {
+  font-size: 2.5em;
+  padding: 20px;
+}
+.research_part .content_part p, .research_part .content_part a {
+  margin-top: 20%;
+  color: #fff;
+}
+.research_part .content_part a {
+  text-decoration: none;
+  padding: 5px;
+  background-color: #000000;
+  border-radius: 10px;
+}
+
+.footer {
+  z-index: 2; /*this overlaps over the image*/
+}
+.footer footer {
+  position: static; /*this helps the footer to stay at the bottom*/
+  bottom: 0; /*position relative to the bottom*/
+  background-color: #171717;
+  width: 100%;
+  height: 300px;
+  display: flex; /*defines the footer section as a box*/
+  padding: 5px;
+}
+.footer footer #footer_map {
+  flex: 30%;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+.footer footer #footer_map iframe {
+  width: 400px;
+}
+.footer footer #footer2, .footer footer #footer3 {
+  padding-left: 10px;
+  padding-top: 15px;
+}
+.footer footer #footer2 {
+  flex: 45%; /*divides the footer box to 45% for the middle box*/
+  display: flex; /*We make the footer2 div a box again so that we can divide two boxes,
+contact and socials in an equally spaced manner*/
+}
+.footer footer #footer2 #contact, .footer footer #footer2 #socials {
+  flex: 50%; /*equally divides footer2 into 2 halves*/
+}
+.footer footer #footer2 #socials img {
+  padding: 5px;
+}
+.footer footer #footer3 {
+  flex: 25%;
+}
+.footer footer .footer_text {
+  color: #ecbe1a;
+  font-weight: 500; /*boldness of text*/
+}
+.footer footer .footer_text_info {
+  color: #cecece;
+}
+.footer footer ul {
+  list-style: none; /*removes the listing dot thingy*/
+  line-height: 30px; /*vertical spacing between lines*/
+}
+.footer footer ul a {
+  text-decoration: none; /*removes underlined thingy from link*/
+  color: #cecece;
+}
+
+/*# sourceMappingURL=main.css.map */
